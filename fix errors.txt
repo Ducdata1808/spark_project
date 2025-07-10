@@ -1,0 +1,12 @@
+WARN YarnScheduler: Initial job has not accepted any resources...: change SparkSession.master to "local[*]"
+
+Using an existing Spark session; only runtime SQL configurations will take effect:
+step1: spark.stop()
+step2: restart kernel
+step3: turn on master terminal
+step4: type: yarn application -list
+step5: stop all running SparkSession: yarn application -kill <sparksession id>
+
+file path not found
+import os
+df_products = spark.read.csv("file://"+os.path.abspath("tmp/brazilian-ecommerce/olist_products_dataset.csv"), header=True, inferSchema=True)
